@@ -1,42 +1,42 @@
 Status for the file Trump.txt
-The following number of names are redacted from the file 8 
-The following number of dates are redacted from the file 2 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 1 
-The total number of redactions in the file are 11 
+names redacted 8 
+dates redacted 2 
+genders redacted0 
+sentences redacted 1 
+Total redacted terms11 
 Status for the file Obama.txt
-The following number of names are redacted from the file 13 
-The following number of dates are redacted from the file 6 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 1 
-The total number of redactions in the file are 20 
+names redacted 13 
+dates redacted 6 
+genders redacted0 
+sentences redacted 1 
+Total redacted terms20 
 Status for the file Donald.txt
-The following number of names are redacted from the file 5 
-The following number of dates are redacted from the file 9 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 1 
-The total number of redactions in the file are 15 
+names redacted 5 
+dates redacted 9 
+genders redacted0 
+sentences redacted 1 
+Total redacted terms15 
 Status for the file stats.txt
-The following number of names are redacted from the file 0 
-The following number of dates are redacted from the file 0 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 0 
-The total number of redactions in the file are 0 
+names redacted 0 
+dates redacted 0 
+genders redacted0 
+sentences redacted 0 
+Total redacted terms0 
 Status for the file otherfiles/Michelle.txt
-The following number of names are redacted from the file 10 
-The following number of dates are redacted from the file 6 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 1 
-The total number of redactions in the file are 17 
+names redacted 10 
+dates redacted 6 
+genders redacted0 
+sentences redacted 1 
+Total redacted terms17 
 Status for the file otherfiles/Ivanka.txt
-The following number of names are redacted from the file 12 
-The following number of dates are redacted from the file 3 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 3 
-The total number of redactions in the file are 18 
+names redacted 12 
+dates redacted 3 
+genders redacted0 
+sentences redacted 3 
+Total redacted terms18 
 Status for the file otherfiles/Melania.txt
-The following number of names are redacted from the file 10 
-The following number of dates are redacted from the file 1 
-The following number of genders are redacted from the file 0 
-The following number of sentences are redacted from the file 0 
-The total number of redactions in the file are 11 
+names redacted 10 
+dates redacted 1 
+genders redacted0 
+sentences redacted 0 
+Total redacted terms11 

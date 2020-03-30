@@ -74,11 +74,11 @@ def stats(names_list, dates, gen_list, gender_count, list_of_concepts, count_of_
     total = len(names_list) + count_of_concepts + len(dates) + gender_count
     st = stats_list[0]
     status += ("Status for the file {}\n".format(f))
-    status += ("The following number of names are redacted from the file {} \n".format(len(names_list)))
-    status += ("The following number of dates are redacted from the file {} \n".format(len(dates)))
-    status += ("The following number of genders are redacted from the file {} \n".format(gender_count))
-    status += ("The following number of sentences are redacted from the file {} \n".format(count_of_concepts))
-    status += ("The total number of redactions in the file are {} \n".format(total))
+    status += ("names redacted {} \n".format(len(names_list)))
+    status += ("dates redacted {} \n".format(len(dates)))
+    status += ("genders redacted{} \n".format(gender_count))
+    status += ("sentences redacted {} \n".format(count_of_concepts))
+    status += ("Total redacted terms{} \n".format(total))
 
     if st == 'stdout':
         print(status)
@@ -86,10 +86,10 @@ def stats(names_list, dates, gen_list, gender_count, list_of_concepts, count_of_
     elif st == 'stderr':
         err = ''
         if len(names_list) == 0:
-            err += ("There are no names in the file to be redacted\n")
+            err += ("no redacted names\n")
         if len(dates) == 0:
-            err += ("There are no dates in the file to be redacted\n")
-        if count_of_concepts == 0:
+            err += ("no redacted dates\n")
+        if count_of_concepts ==0:
             err += ("There are no matches for concept in the file to be redacted\n")
 
         sys.stderr.write(err)
