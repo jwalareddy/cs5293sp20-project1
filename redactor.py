@@ -20,7 +20,7 @@ d = 'dates'
 #print(len(sample_list))
 del sample_list[0]
 
-# For loop to save all the list of possible actions to be done
+# all redaction actions are defined over here.
 for i in range(len(sample_list)):
 #    print(sample_list[i])
     if sample_list[i] == '--input':
@@ -63,7 +63,7 @@ for paths in path1:
         data = main.redact(names_list, list_of_genders, dates, list_of_concepts, data)
         status = main.stats(names_list, dates, list_of_genders, gender_count, list_of_concepts, count_of_concepts, stats_list, f)
         
-        #os.system("touch {}".format("stats.txt"))
+        
         file_path = "stats/stats.txt"
         with open(file_path, 'a',encoding="utf-8") as file:
             file.write(status)
@@ -76,4 +76,4 @@ for paths in path1:
             file.write(data)
             file.close()
 
-#print(flags)
+
