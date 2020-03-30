@@ -1,0 +1,36 @@
+Status for the file 2019-Obama.txt
+The following number of names are redacted from the file 13 
+The following number of dates are redacted from the file 2 
+The following number of genders are redacted from the file 0 
+The following number of sentences are redacted from the file 0 
+The total number of redactions in the file are 15 
+Status for the file 2018-Donald.txt
+The following number of names are redacted from the file 4 
+The following number of dates are redacted from the file 4 
+The following number of genders are redacted from the file 0 
+The following number of sentences are redacted from the file 0 
+The total number of redactions in the file are 8 
+Status for the file 2020-Trump.txt
+The following number of names are redacted from the file 5 
+The following number of dates are redacted from the file 1 
+The following number of genders are redacted from the file 0 
+The following number of sentences are redacted from the file 0 
+The total number of redactions in the file are 6 
+Status for the file otherfiles/2017-Michelle.txt
+The following number of names are redacted from the file 4 
+The following number of dates are redacted from the file 4 
+The following number of genders are redacted from the file 0 
+The following number of sentences are redacted from the file 0 
+The total number of redactions in the file are 8 
+Status for the file otherfiles/2016-Melania.txt
+The following number of names are redacted from the file 6 
+The following number of dates are redacted from the file 0 
+The following number of genders are redacted from the file 0 
+The following number of sentences are redacted from the file 0 
+The total number of redactions in the file are 6 
+Status for the file otherfiles/2015-Ivanka.txt
+The following number of names are redacted from the file 8 
+The following number of dates are redacted from the file 2 
+The following number of genders are redacted from the file 0 
+The following number of sentences are redacted from the file 1 
+The total number of redactions in the file are 11 
