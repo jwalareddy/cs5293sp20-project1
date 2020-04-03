@@ -48,6 +48,8 @@ cs5293p20-project1/
   ├── test_genders.py
   └── test_dates
 ~~~  
+## Platform used :
+I used Google Cloud Platform to create a VM instance in the cloud. I used it for cloning the Git repository, and made changes using the following github actions.
 
 ## Git Repository commands :
 Initially we create a private repository in ouy github accounts using the name cs5293p20-project1. We clone the repository link into our Linux environment by using the following command :
@@ -70,3 +72,6 @@ to pull the changes, if any, made from the github repository to our local enviro
 git pull origin master
 ~~~
 
+## Functions used :
+I have created a project1 directory, in which I have 2 files, redactor.py and main.py. 
+I have written the init main function in redactor.py 
