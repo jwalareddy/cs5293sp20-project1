@@ -13,9 +13,8 @@ pipenv install numpy
 ~~~
 
 ## List of files
-cs5293p20-project1/
 ~~~
-
+cs5293p20-project1/
 ├── COLLABORATORS
 ├── LICENSE
 ├── Pipfile.lock
@@ -50,4 +49,24 @@ cs5293p20-project1/
   └── test_dates
 ~~~  
 
+## Git Repository commands :
+Initially we create a private repository in ouy github accounts using the name cs5293p20-project1. We clone the repository link into our Linux environment by using the following command :
+~~~
+https://github.com/jwalareddy/cs5293sp20-project1.git
+~~~
+Further changes made to the directory structure are committed to github using the following commands :
+~~~
+git add -A
+git commit -m " appropriate message to be displayed if it is the initial commit or the final commit"
+git push origin master 
+git pull origin master
+~~~
+If any errors occur while pushing the data from the linux environment to the github repository, we can use 
+~~~
+git push origin master --force
+~~~
+to pull the changes, if any, made from the github repository to our local environment, we use the following command :
+~~~
+git pull origin master
+~~~
 
