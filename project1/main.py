@@ -35,7 +35,7 @@ def dates(data):
     return data, list_of_dates
 
 def genders(data):
-    list_of_genders=['he','she','him','her','his','hers','male','female','man','woman','men','women']
+    list_of_genders=['he', 'she', 'himself', 'herself', 'male', 'female', 'him', 'her', 'his', 'man', 'woman', 'men', 'women', 'husband', 'wife']
     return data, list_of_genders
 
 #The wordnet.synsets() function from the wordnet package is used to find the synonms of the given word. The synonms of the word are matched with the sentences present within the text file and the sentences matched are redacted with a unicode full block character ('\u2588').

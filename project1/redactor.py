@@ -53,8 +53,8 @@ for paths in path1:
         print(f)
         if n in flags:
             data, names_list = main.names(data)
-        if g in flags:
-            data, list_of_genders, gender_count = main.genders(data)
+        #if g in flags:
+            #data, list_of_genders, gender_count = main.genders(data)
         if d in flags:
             data,dates = main.dates(data)
         

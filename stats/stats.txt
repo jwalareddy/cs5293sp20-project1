@@ -2,26 +2,20 @@ Status for the file Trump.txt
 names redacted 8 
 dates redacted 2 
 genders redacted0 
-sentences redacted 1 
-Total redacted terms11 
+sentences redacted 0 
+Total redacted terms10 
 Status for the file Obama.txt
 names redacted 13 
 dates redacted 6 
 genders redacted0 
-sentences redacted 1 
-Total redacted terms20 
+sentences redacted 0 
+Total redacted terms19 
 Status for the file Donald.txt
 names redacted 5 
 dates redacted 9 
 genders redacted0 
-sentences redacted 1 
-Total redacted terms15 
-Status for the file stats.txt
-names redacted 0 
-dates redacted 0 
-genders redacted0 
 sentences redacted 0 
-Total redacted terms0 
+Total redacted terms14 
 Status for the file otherfiles/Michelle.txt
 names redacted 10 
 dates redacted 6 
@@ -32,8 +26,8 @@ Status for the file otherfiles/Ivanka.txt
 names redacted 12 
 dates redacted 3 
 genders redacted0 
-sentences redacted 3 
-Total redacted terms18 
+sentences redacted 1 
+Total redacted terms16 
 Status for the file otherfiles/Melania.txt
 names redacted 10 
 dates redacted 1 
