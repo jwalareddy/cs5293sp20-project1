@@ -14,20 +14,40 @@ pipenv install numpy
 
 ## List of files
 cs5293p20-project1/
+~~~
+
 ├── COLLABORATORS
 ├── LICENSE
-├── Pipfile
 ├── Pipfile.lock
 ├── README.md
-├── project0
-│ ├── init.py
+├── Pipfile
+├── project1
+│ ├── redactor.py
 │ └── main.py
-├── docs
+├── files
+│ ├── Donald.redacted
+│ ├── Trump.redacted
+  ├── Obama.redacted
+  └── otherfiles
+    ├──Ivanka.redacted
+    ├──Melania.redacted
+    └──Michelle.redacted
+├── otherfiles
+│ ├── Ivanka.txt
+│ ├── Melania.txt
+  └── Michelle.txt
+├── stats
+  └── stats.txt
 ├── setup.cfg
 ├── setup.py
-└── tests
-├── test_names.py
-└── test_genders.py
-└── ...
+├── .gitignore
+├── Donald.txt
+├── Obama.txt
+├── Trump.txt
+├── tests
+  ├── test_names.py
+  ├── test_genders.py
+  └── test_dates
+~~~  
 
 
