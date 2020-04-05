@@ -149,3 +149,9 @@ Pytest to check if the genders function takes the given gender list and redacts 
 def test_dates.py :
 Pytest to check if the dates function extracts the dates using the CommonRegex functionality from the given input text file. I gave a sample test string, and checked whether the number of dates that are returned are the same as in the given sample string. Checked if the redaction is done. If so, the test case is passed, else it is failed.
 
+## To run the Pytest : 
+I used the following command to run my python tests for the given function.
+~~~
+ pipenv run python -m pytest
+ ~~~
+ 
