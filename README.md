@@ -75,3 +75,77 @@ git pull origin master
 ## Functions used :
 I have created a project1 directory, in which I have 2 files, redactor.py and main.py. 
 I have written the init main function in redactor.py 
+In the file redactor.py, I have called the main function and the function calling. In the file main.py, I have the individual functions, each for the redaction of names, genders and dates. I have created a directory project1 and the files redactor.py and main.py are stored in those files.
+## To run the program:
+Go to the directory project1 and run the following python command:
+~~~
+pipenv run python redactor.py --input '*.txt' \
+                    --input 'otherfiles/*.txt' \
+                    --names --dates --genders \
+                    --concept 'kids' \
+                    --output 'files/' \
+                    --stats stderr
+~~~
+## Description of the functions used : 
+def rednames() :
+Here, I give the input data as a text file. I used the nltk function to tokenize the text and the individual person names in the text file are stored in a list and redacted with the full unicode block character('\u2588'). I used the concept of tagging to extract the words tagged as PERSON. 
+
+def reddates() :
+I used the CommonRegex funnction to parse the list of dates in the input file. In the input file that I gave in my program, I gave the date format in the Wikipedia format, which, for example is 18 January, 1996.
+
+def redgenders() :
+I assumed the following gender list, with the given values in the list to be redacted in the input file.
+~~~
+list_of_genders=['he', 'she', 'himself', 'herself', 'male', 'female', 'him', 'her', 'his',
+ 'man', 'woman', 'men', 'women', 'husband', 'wife']
+ ~~~
+
+These values, if found in the input text file are redacted with the full unicode block character('\u2588'). 
+
+def redconcepts() :
+I used the wordnet package to find the synonyms of the word, the wordnet.synsets() function is used to find the synonyms for any given word, using the following command.
+~~~
+synon = wordnet.synsets(word)
+~~~
+
+def stats :
+Stats takes either the name of a file, or special files (stderr, stdout), and writes a summary of the redaction process. Some statistics to include are the types and counts of redacted terms and the statistics of each redacted file. 
+
+# Sample Outputs : 
+# Redacting names :
+~~~
+Donald John Trump is the 45th and current President of the United States.
+██████ ██████████ is the 45th and current President of the United States
+~~~
+
+# Redacting dates :
+~~~
+Check to see if the dates are redacted :
+March 30, 2019
+January 26, 1948
+Check to see if the dates are redacted :
+██████████████
+██████████████
+~~~
+
+# Redacting genders : 
+~~~
+He is a great leader.
+█ is a a great leader.
+~~~
+
+## Pytest framework for the project :
+I used the Pytest framework in Python to check for the individual test cases for the redaction process. To run the pytest framework, we need to first ensure if we have the pytest installed in our current project directory. I used the following command to install the pytest in my project's execution virtual environment.
+~~~
+pipenv install pytest
+~~~
+I have written the test cases for all the three redaction functions. 
+def test_names.py  :
+Pytest to check if the function names() extracts the names using the appropriate packages and functions from the given input text file. I gave a sample test string, and check whether the number of names returned in the text file are the same as given in the sample string. Checked if the redaction is done. If so, the test case is passed. Else, it is failed.
+
+def test_genders.py :
+Pytest to check if the genders function takes the given gender list and redacts them with the required unicode full block character('\u2588'). If so, the test case is passed. Else, it is failed.
+
+def test_dates.py :
+Pytest to check if the dates function extracts the dates using the CommonRegex functionality from the given input text file. I gave a sample test string, and checked whether the number of dates that are returned are the same as in the given sample string. Checked if the redaction is done. If so, the test case is passed, else it is failed.
+
