@@ -1,45 +1,45 @@
 Following are the redactions for the files specified Helen.txt
 names redacted 3 
 dates redacted 2 
-genders redacted0 
-Total redacted terms5 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates5 
 Following are the redactions for the files specified Trump.txt
 names redacted 11 
 dates redacted 2 
-genders redacted0 
-Total redacted terms13 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates13 
 Following are the redactions for the files specified Obama.txt
 names redacted 15 
 dates redacted 6 
-genders redacted0 
-Total redacted terms21 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates21 
 Following are the redactions for the files specified Modi.txt
 names redacted 3 
 dates redacted 1 
-genders redacted0 
-Total redacted terms4 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates4 
 Following are the redactions for the files specified Donald.txt
 names redacted 11 
 dates redacted 9 
-genders redacted0 
-Total redacted terms20 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates20 
 Following are the redactions for the files specified otherfiles/Michelle.txt
 names redacted 15 
 dates redacted 6 
-genders redacted0 
-Total redacted terms21 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates21 
 Following are the redactions for the files specified otherfiles/Ivanka.txt
 names redacted 12 
 dates redacted 3 
-genders redacted0 
-Total redacted terms15 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates15 
 Following are the redactions for the files specified otherfiles/Melania.txt
 names redacted 11 
 dates redacted 1 
-genders redacted0 
-Total redacted terms12 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates12 
 Following are the redactions for the files specified otherfiles/Prof.txt
 names redacted 1 
 dates redacted 2 
-genders redacted0 
-Total redacted terms3 
+genders redacted15 
+Total redacted terms of extremely sensitive data names and dates3 

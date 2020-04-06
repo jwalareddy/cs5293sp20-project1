@@ -62,15 +62,15 @@ def redact(names_list, list_of_genders, dates, data):
         block = len(element) * '\u2588'
         data = re.sub(element, block, data)
     return data
-def stats(names_list, dates, gen_list, gender_count, statistics, file1):
+def stats(names_list, dates, list_of_genders, gender_count, statistics, file1):
     status = ''
     total = len(names_list) +  len(dates) + gender_count
     st = statistics[0]
     status += ("Following are the redactions for the files specified {}\n".format(file1))
     status += ("names redacted {} \n".format(len(names_list)))
     status += ("dates redacted {} \n".format(len(dates)))
-    status += ("genders redacted{} \n".format(gender_count))
-    status += ("Total redacted terms{} \n".format(total))
+    status += ("genders redacted{} \n".format(len(list_of_genders)-(gender_count)))
+    status += ("Total redacted terms of extremely sensitive data names and dates{} \n".format(total))
     if st == 'stdout':
         print(status)
     elif st == 'stderr':
