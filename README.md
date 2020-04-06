@@ -156,7 +156,7 @@ I used the following command to run my python tests for the given function.
  ~~~
  
 Screenshots of successful execution of the main program, without any errors.
-https://github.com/jwalareddy/cs5293sp20-project1/issues/1#issue-595426861
+![proof_of_execution](https://user-images.githubusercontent.com/27561736/78605479-37953280-7821-11ea-957f-74aca42bc475.PNG)
 
 Screenshot for successful pytest running :
 ![2020-04-06](https://user-images.githubusercontent.com/27561736/78605379-03ba0d00-7821-11ea-8fd5-802e6eece69d.png)
