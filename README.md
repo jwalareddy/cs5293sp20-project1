@@ -161,3 +161,7 @@ Screenshots of successful execution of the main program, without any errors.
 
 Screenshot for successful pytest running :
 ![2020-04-06](https://user-images.githubusercontent.com/27561736/78605379-03ba0d00-7821-11ea-8fd5-802e6eece69d.png)
+
+## Assumptions made : 
+I have assumed a specific list for genders and redacted the input text files, based on those specific genders only
+Also, I used the CommonRegex function for dates redaction and also formulated a regular expression that is also running.
