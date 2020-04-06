@@ -87,6 +87,7 @@ pipenv run python redactor.py --input '*.txt' \
                     --output 'files/' \
                     --stats stderr
 ~~~
+I have attached a screenshot which shows that the program is running without any error. 
 ## Description of the functions used : 
 def names() :
 Here, I give the input data as a text file. I used the nltk function to tokenize the text and the individual person names in the text file are stored in a list and redacted with the full unicode block character('\u2588'). I used the concept of tagging to extract the words tagged as PERSON. 
@@ -165,3 +166,5 @@ Screenshot for successful pytest running :
 ## Assumptions made : 
 I have assumed a specific list for genders and redacted the input text files, based on those specific genders only
 Also, I used the CommonRegex function for dates redaction and also formulated a regular expression that is also running.
+While running the tests, I have 9 passed test cases, each for testing the names and genders for a given input sample data. Also, I have one test case that is failed because of an assertion error in the test_dates.py function. I have attached the screenshot for the output that I obtained while running my Pytest.
+For genders function, only a specified number of terms are redacted every time.
