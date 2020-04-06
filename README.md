@@ -87,13 +87,13 @@ pipenv run python redactor.py --input '*.txt' \
                     --stats stderr
 ~~~
 ## Description of the functions used : 
-def rednames() :
+def names() :
 Here, I give the input data as a text file. I used the nltk function to tokenize the text and the individual person names in the text file are stored in a list and redacted with the full unicode block character('\u2588'). I used the concept of tagging to extract the words tagged as PERSON. 
 
-def reddates() :
+def dates() :
 I used the CommonRegex funnction to parse the list of dates in the input file. In the input file that I gave in my program, I gave the date format in the Wikipedia format, which, for example is 18 January, 1996.
 
-def redgenders() :
+def genders() :
 I assumed the following gender list, with the given values in the list to be redacted in the input file.
 ~~~
 list_of_genders=['he', 'she', 'himself', 'herself', 'male', 'female', 'him', 'her', 'his',
@@ -102,13 +102,13 @@ list_of_genders=['he', 'she', 'himself', 'herself', 'male', 'female', 'him', 'he
 
 These values, if found in the input text file are redacted with the full unicode block character('\u2588'). 
 
-def redconcepts() :
+def concepts() :
 I used the wordnet package to find the synonyms of the word, the wordnet.synsets() function is used to find the synonyms for any given word, using the following command.
 ~~~
 synon = wordnet.synsets(word)
 ~~~
 
-def stats :
+def stats() :
 Stats takes either the name of a file, or special files (stderr, stdout), and writes a summary of the redaction process. Some statistics to include are the types and counts of redacted terms and the statistics of each redacted file. 
 
 # Sample Outputs : 
@@ -155,3 +155,4 @@ I used the following command to run my python tests for the given function.
  pipenv run python -m pytest
  ~~~
  
+Screenshots of successful execution of the main program, without any errors.
