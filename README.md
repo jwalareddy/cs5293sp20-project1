@@ -64,7 +64,6 @@ git commit -m " appropriate message to be displayed if it is the initial commit 
 git push origin master 
 git pull origin master
 ~~~
-git pull is for any changes that have been made in the git repository to be pushed back into your cloud instance. For example, that of your readme file.
 If any errors occur while pushing the data from the linux environment to the github repository, we can use 
 ~~~
 git push origin master --force
@@ -94,7 +93,7 @@ def names() :
 Here, I give the input data as a text file. I used the nltk function to tokenize the text and the individual person names in the text file are stored in a list and redacted with the full unicode block character('\u2588'). I used the concept of tagging to extract the words tagged as PERSON. 
 
 def dates() :
-I used the CommonRegex funnction to parse the list of dates in the input file. In the input file that I gave in my program, I gave the date format in the Wikipedia format, which, for example is 18 January, 1996.
+I used the CommonRegex funnction to parse the list of dates in the input file. In the input file that I gave in my program, I gave the date format in the Wikipedia format, which, for example is 18 January, 1996. Other than that, I also used a Regular Expression to validate a date format and also checked if it is running. It is successful.
 
 def genders() :
 I assumed the following gender list, with the given values in the list to be redacted in the input file.
@@ -108,11 +107,13 @@ These values, if found in the input text file are redacted with the full unicode
 def concepts() :
 I used the wordnet package to find the synonyms of the word, the wordnet.synsets() function is used to find the synonyms for any given word, using the following command.
 ~~~
-synon = wordnet.synsets(word)
+synonyms = wordnet.synsets(word)
 ~~~
+def redact() :
+Once, I have the individuals list of names, dates and genders, I performed the redact function on them. At a time, I did the redaction each for names, genders, dates and concepts. Also, I tried to write individual functions each for redaction where in in redact_names(), I return a list with the redacted names and similarily for other redaction functions. I have written using the same methodology as in the previous one. Only that each of them is redacted as it is read.
 
 def stats() :
-Stats takes either the name of a file, or special files (stderr, stdout), and writes a summary of the redaction process. Some statistics to include are the types and counts of redacted terms and the statistics of each redacted file. 
+Stats takes either the name of a file, or special files (stderr, stdout), and writes a summary of the redaction process. Some statistics to include are the types and counts of redacted terms and the statistics of each redacted file. I displayed the statistics of the redacted names, genders and dates in a given file. Among those terms, I assumed the names and dates to be highly sensitive terms and displayed the total terms redacted as the sum of those. This is my assumption for them to be highly sensitive terms. 
 
 # Sample Outputs : 
 # Redacting names :
@@ -144,7 +145,7 @@ pipenv install pytest
 ~~~
 I have written the test cases for all the three redaction functions. 
 def test_names.py  :
-Pytest to check if the function names() extracts the names using the appropriate packages and functions from the given input text file. I gave a sample test string, and check whether the number of names returned in the text file are the same as given in the sample string.  If so, the test case is passed. Else, it is failed.
+Pytest to check if the function names() extracts the names using the appropriate packages and functions from the given input text file. I gave a sample test string, and check whether the number of names returned in the text file are the same as given in the sample string. Checked if the redaction is done. If so, the test case is passed. Else, it is failed.
 
 def test_genders.py :
 Pytest to check if the genders function takes the given gender list and redacts them with the required unicode full block character('\u2588'). If so, the test case is passed. Else, it is failed.
@@ -165,7 +166,9 @@ Screenshot for successful pytest running :
 ![2020-04-06](https://user-images.githubusercontent.com/27561736/78605379-03ba0d00-7821-11ea-8fd5-802e6eece69d.png)
 
 ## Assumptions made : 
+~~~
 I have assumed a specific list for genders and redacted the input text files, based on those specific genders only
 Also, I used the CommonRegex function for dates redaction and also formulated a regular expression that is also running.
 While running the tests, I have 9 passed test cases, each for testing the names and genders for a given input sample data. Also, I have one test case that is failed because of an assertion error in the test_dates.py function. I have attached the screenshot for the output that I obtained while running my Pytest.
 For genders function, only a specified number of terms are redacted every time.
+~~~
