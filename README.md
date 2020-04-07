@@ -64,6 +64,7 @@ git commit -m " appropriate message to be displayed if it is the initial commit 
 git push origin master 
 git pull origin master
 ~~~
+git pull is for any changes that have been made in the git repository to be pushed back into your cloud instance. For example, that of your readme file.
 If any errors occur while pushing the data from the linux environment to the github repository, we can use 
 ~~~
 git push origin master --force
