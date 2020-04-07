@@ -171,6 +171,8 @@ I have assumed a specific list for genders and redacted the input text files, ba
 Also, I used the CommonRegex function for dates redaction and also formulated a regular expression that is also running.
 While running the tests, I have 9 passed test cases, each for testing the names and genders for a given input sample data. Also, I have one test case that is failed because of an assertion error in the test_dates.py function. I have attached the screenshot for the output that I obtained while running my Pytest.
 For genders function, only a specified number of terms are redacted every time.
+Towards the end of submission, I ran my code with the optional functions that I used that are mentioned in comments in my main.py code and redactor.py code to see if the input texts are redacted using those functions. The program ran successfully, and the inputs that I provided as part of those optional function redactions are Modi.txt and Helen.txt
+I have the redacted files of those in the respective files.
 ~~~
 
 ## Submitting my code :
