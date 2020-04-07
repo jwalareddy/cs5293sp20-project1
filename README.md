@@ -144,7 +144,7 @@ pipenv install pytest
 ~~~
 I have written the test cases for all the three redaction functions. 
 def test_names.py  :
-Pytest to check if the function names() extracts the names using the appropriate packages and functions from the given input text file. I gave a sample test string, and check whether the number of names returned in the text file are the same as given in the sample string. Checked if the redaction is done. If so, the test case is passed. Else, it is failed.
+Pytest to check if the function names() extracts the names using the appropriate packages and functions from the given input text file. I gave a sample test string, and check whether the number of names returned in the text file are the same as given in the sample string.  If so, the test case is passed. Else, it is failed.
 
 def test_genders.py :
 Pytest to check if the genders function takes the given gender list and redacts them with the required unicode full block character('\u2588'). If so, the test case is passed. Else, it is failed.
