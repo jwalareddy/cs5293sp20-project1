@@ -1,7 +1,6 @@
 https://stackoverflow.com/questions/35672809/how-to-read-a-list-of-txt-files-in-a-folder-in-python, for basic file loading functions
 https://www.geeksforgeeks.org/get-synonymsantonyms-nltk-wordnet-python/
-https://stackoverflow.com/questions/20290870/improving-the-extraction-of-human-names-with-nltk , referred to this for extracting human names.
-
+https://stackoverflow.com/questions/20290870/improving-the-extraction-of-human-names-with-nltk , referred to this for  names.
 https://likegeeks.com/nlp-tutorial-using-python-nltk/ , helped in understanding the basic nltk concepts.
 
 https://stackoverflow.com/questions/34527917/extracting-phone-numbers-from-a-free-form-text-in-python-by-using-regex, I tried to use the concept of CommonRegec after referring this link

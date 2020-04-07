@@ -16,6 +16,21 @@ gen = 'genders'
 dat = 'dates'
 print(len(sample_list))
 #all redaction actions are defined over here.
+#other than this, I also used Argument Parser to parse the individual files in init function.
+"""
+file3=path2+file1
+for file in file3:
+    fill = open(files,'r')
+    text = data.read()
+    if(args.names == True):
+        data1 = names(data);
+    if(args.genders==True):
+        data1 = genders(data);
+    if(args.dates == True):
+        data1 = phones(data);
+
+#writing these to a file which is failing due to some reason
+"""
 for i in range(len(sample_list)):
     print(sample_list[i])
     if sample_list[i] == '--input':

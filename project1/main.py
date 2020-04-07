@@ -109,7 +109,7 @@ def redact_names(data):
         for tree in chunks:
             names.extend(extract_names(tree))
         for e in names:
-            redacted_data = redacted_data.replace(e,'██')
+            redacted_data = redacted_data.replace(e,'█')
         file1.append(redacted_data)
     return file1
 """
@@ -125,4 +125,20 @@ def redact_genders(data):
             if word.lower()==item and not None:
                 file=file.replace(word,'█'*len(word)) 
     file=re.sub(r'\bHe\b','██',data)
+"""
+
+"""
+#for redacting locations, this is optional.
+def locations(data):
+    location =[]
+    location_list=[]
+    tags = ne_chunk(pos_tag(word_tokenize(data)))
+    for i in tags:
+    if hassattr(i,'label') and i.label:
+        if(i.label()=='LOCATION'):
+            location_list.append(''.join([location_tag[0] for location_tag in i]))
+    if(tag=='--name'):
+        for loc in location_list:
+        data=data.replace(loc, '█'*len(loc)
+    return data
 """
