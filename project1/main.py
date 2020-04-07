@@ -31,20 +31,32 @@ def names(data):
 def dates(data):
     text_parsed = CommonRegex(data)
     list_of_dates = text_parsed.dates
-    #alternately, if i use regular expression, to find dates.
-    #list1 = re.findall(r'\d {1,4}.\d{1,2}.\d{1,4}|\d{1,2}?[ \t.-]*[A-Za-z]+[ \t.-]* \d{1,4}|\w{3,9}[ \t.-]*\d{1,2}[ \t.-]*\d{1,4}|\w{3,9}[ \t.-]*\d{1,4}', text)
-    #return(list1)
+    #alternately, if i use regular expression, to find dates.The regular expressions can be de#defined as we want.
+    """ 
+    init_file=[]
+    total_data=data
+    dates_red=[]
+    for i in range(len(total_data)):
+        red = total_data[i]
+        red_dates = re.findall(r"([A-Z]\w\w\w+\s\d+,\s\d\d\d\d)", red)
+        dates_red.append(red_dates)
+        for i in range(len(dates_red)):
+            for j in dates_red:
+                red = red.replace(j,'██')
+        init_file.append(red)
+    return init_file
+    """
     return data, list_of_dates
 def genders(data):
     #alternately, i can use a regular expression to find the genders redaction.
     """
     pattern = r' [hH]e | [Ss]he | [Hh]is | [Hh]er | [Hh]im | [Hh]imself | [Hh]erself | [Hh]ers | [sS]on | [Dd]addy| mom| dad| brother| sister| mommy | man| men| wom[ae]n'
-    list3 = re.findall(pattern,text)
-    return list3
+    list1 = re.findall(pattern,text)
+    return list1
     """
-    list_of_genders=['he', 'she', 'himself', 'herself', 'male', 'female', 'him', 'her', 'his', 'man', 'woman', 'men', 'women', 'husband', 'wife']
+    list_of_genders=['he', 'she', 'himself', 'herself', 'him', 'her', 'his', 'man', 'woman', 'men', 'women']
     return data, list_of_genders
-#The wordnet.synsets() function from the wordnet package is used to find the synonms of the given word. The synonms of the word are matched with the sentences present within the tex
+#The wordnet.synsets() function from the wordnet package is used to find the synonms of the gi#ven word. The synonms of the word are matched with the sentences present within the tex
 #t file and the sentences matched are redacted with a unicode full block character ('\u2588').
 def concept(data, concept):
     sentences = nltk.sent_tokenize(data)
@@ -63,32 +75,31 @@ def redact(names_list, list_of_genders, dates, data):
         data = re.sub(element, block, data)
     return data
 def stats(names_list, dates, list_of_genders, gender_count, statistics, file1):
-    status = ''
-    total = len(names_list) +  len(dates) + gender_count
-    st = statistics[0]
-    status += ("Following are the redactions for the files specified {}\n".format(file1))
-    status += ("names redacted {} \n".format(len(names_list)))
-    status += ("dates redacted {} \n".format(len(dates)))
-    status += ("genders redacted{} \n".format(len(list_of_genders)-(gender_count)))
-    status += ("Total redacted terms of extremely sensitive data names and dates{} \n".format(total))
-    if st == 'stdout':
-        print(status)
-    elif st == 'stderr':
+    total = len(names_list) + gender_count + len(dates)
+    rk = statistics[0]
+
+    rank= ''
+    rank += ("Following are the redactions for the files specified {}\n".format(file1))
+    rank += ("names redacted {} \n".format(len(names_list)))
+    rank += ("dates redacted {} \n".format(len(dates)))
+    rank += ("genders redacted{} \n".format(len(list_of_genders)-(gender_count)))
+    rank += ("Total redacted terms of extremely sensitive data names and dates{} \n".format(total))
+    if rk == 'stdout':
+        print(rank)
+    elif rk == 'stderr':
         err = ''
         sys.stderr.write(err)
     else:
         file_path = "stats.txt"
         with open(file_path, 'a',encoding="utf-8") as file:
-            file.write(status)
+            file.write(rank)
             file.close()
-    return status
-#alternately instead of this, we can write individual functions and then do the  redaction process in that individual function and return the values to the main for depicting the st
-#atistics. for redacting genders, we can use TreebankWordDetokenizer to tokenize the text. for dates, we can use the current one only, commonregex for parsing the text.
+    return rank
+#alternately instead of this, we can write individual functions and then do the  redaction pro#cess in that individual function and return the values to the main for depicting the statisti#cs. for redacting genders, we can use TreebankWordDetokenizer to tokenize the text. for dates#, we can use the current one only, commonregex for parsing the text.
 """
-def redact_names(a):
+def redact_names(data):
     names = []
     file1 = []
-    data = a
     for i in range(len(data)):
         redacted_data = data[i]
         sentences = nltk.sent_tokenize(redacted_data)
@@ -104,14 +115,14 @@ def redact_names(a):
 """
 #I also executed the file using the TreebankWordDetokenizer,and it is also running,
 """
-def redact_genders(file):
+def redact_genders(data):
 
     genders=['He', 'She', 'Himself', 'Herself', 'Male', 'Female', 'Him', 'Her', 'His', 'Hisself', 'Man', 'Woman', 'Men', 'Women', 'Husband', 'Wife', 'Gay']
-    words = word_tokenize(file)
+    words = word_tokenize(data)
     
-    for w in words:
-        for term in genders:
-            if w.lower()==term and not None:
-                file=file.replace(w,'█'*len(w)) 
-    file=re.sub(r'\bHe\b','██',file)
+    for word in words:
+        for item in genders:
+            if word.lower()==item and not None:
+                file=file.replace(word,'█'*len(word)) 
+    file=re.sub(r'\bHe\b','██',data)
 """
