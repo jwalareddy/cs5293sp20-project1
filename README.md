@@ -98,8 +98,8 @@ I used the CommonRegex funnction to parse the list of dates in the input file. I
 def genders() :
 I assumed the following gender list, with the given values in the list to be redacted in the input file.
 ~~~
-list_of_genders=['he', 'she', 'himself', 'herself', 'male', 'female', 'him', 'her', 'his',
- 'man', 'woman', 'men', 'women', 'husband', 'wife']
+list_of_genders=['he', 'she', 'himself', 'herself', 'him', 'her', 'his',
+ 'man', 'woman', 'boy', 'girl','sir','madam','men', 'women']
  ~~~
 
 These values, if found in the input text file are redacted with the full unicode block character('\u2588'). 
@@ -171,4 +171,11 @@ I have assumed a specific list for genders and redacted the input text files, ba
 Also, I used the CommonRegex function for dates redaction and also formulated a regular expression that is also running.
 While running the tests, I have 9 passed test cases, each for testing the names and genders for a given input sample data. Also, I have one test case that is failed because of an assertion error in the test_dates.py function. I have attached the screenshot for the output that I obtained while running my Pytest.
 For genders function, only a specified number of terms are redacted every time.
+~~~
+
+## Submitting my code :
+I have also made a git tag on my repository with the latest commit :
+~~~
+git tag v1.0
+git push origin v1.0
 ~~~
